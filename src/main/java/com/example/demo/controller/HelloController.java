@@ -21,7 +21,7 @@ public class HelloController {
 
     @GetMapping("/hello/test")
     public String helloTest() {
-        return "test2";
+        return "test";
     }
 
     @GetMapping("/hello/{id}")
