@@ -19,6 +19,11 @@ public class HelloController {
         return "hello this is server from codedeploy";
     }
 
+    @GetMapping("/hello/test")
+    public String helloTest() {
+        return "test2";
+    }
+
     @GetMapping("/hello/{id}")
     public String getHello(@PathVariable("id") Long id) {
         return helloService.getHello(id);
@@ -27,10 +32,5 @@ public class HelloController {
     @PostMapping("/hello")
     public Long postHello(@RequestBody HelloRequestDto helloRequestDto) {
         return helloService.postHello(helloRequestDto);
-    }
-
-    @GetMapping("/hello/test")
-    public String helloTest() {
-        return "test2";
     }
 }
